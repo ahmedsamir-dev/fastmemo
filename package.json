@@ -1,0 +1,31 @@
+{
+  "name": "fast-memo",
+  "version": "1.0.0",
+  "description": "FastMemo - Note Taking RESTful API made by Express, MongoDB, Mongoose, SwaggerUI docs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "prod": "SET NODE_ENV=production && nodemon app.js"
+  },
+  "author": "Ahmed Samir",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6",
+    "validator": "^13.6.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
