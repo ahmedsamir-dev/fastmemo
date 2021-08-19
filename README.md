@@ -1,4 +1,4 @@
-# fastmemo
+# FastMemo
 FastMemo - Note Taking RESTful API
 
 ## Technology Used: 
