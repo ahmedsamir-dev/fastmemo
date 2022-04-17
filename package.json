@@ -4,9 +4,9 @@
   "description": "FastMemo - Note Taking RESTful API made by Express, MongoDB, Mongoose, SwaggerUI docs",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "prod": "SET NODE_ENV=production && nodemon app.js"
-  },
+  },  
   "author": "Ahmed Samir",
   "license": "ISC",
   "dependencies": {

@@ -9,7 +9,6 @@ const AppError = require('./error/AppError');
 const userRouter = require('./routes/user.routes');
 const noteRouter = require('./routes/note.routes');
 const labelRouter = require('./routes/label.routes');
-const viewsRouter = require('./routes/views.routes');
 
 const errorHandler = require('./error/errorHandler');
 
@@ -74,11 +73,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(morgan('dev'));
 
+app.use(
+  cors({
+    exposedHeaders: 'Authorization',
+    origin: ['http://localhost:3000', 'http://localhost:8080'],
+    credentials: true,
+  })
+);
+
 //Defining Static Files
-app.use(express.static(`${__dirname}/images`));
+app.use(express.static('images'));
 
 //Mounting Routes
-app.use('/', viewsRouter);
 app.use('/api/v1/users/', userRouter);
 app.use('/api/v1/notes/', noteRouter);
 app.use('/api/v1/labels/', labelRouter);
