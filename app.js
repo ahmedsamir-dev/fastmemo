@@ -73,13 +73,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(morgan('dev'));
 
-app.use(
-  cors({
-    exposedHeaders: 'Authorization',
-    origin: ['http://localhost:3000', 'http://localhost:8080'],
-    credentials: true,
-  })
-);
+app.use(cors());
 
 //Defining Static Files
 app.use(express.static('images'));
